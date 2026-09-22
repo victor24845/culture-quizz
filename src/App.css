@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7ff;
+  color: #1f2937;
+}
+
+button {
+  font-family: inherit;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+h2 {
+  margin: 20px 0;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+p {
+  margin: 20px 0 32px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* Bouton Commencer */
+
+.start-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #4f46e5;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.start-button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+.start-button:active {
+  transform: scale(0.98);
+}
+
+/* Liste des catégories et réponses */
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Boutons des catégories */
+
+.category-button {
+  display: block;
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background: white;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.category-button:hover {
+  background: #4f46e5;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+.category-button:active {
+  transform: scale(0.98);
+}
+
+/* Boutons des réponses du quiz */
+
+.categories button {
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background: white;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.categories button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.categories button:active {
+  transform: scale(0.98);
+}
+
+/* Bonne réponse */
+
+.correct {
+  background: #22c55e !important;
+  color: white !important;
+}
+
+/* Mauvaise réponse */
+
+.wrong {
+  background: #ef4444 !important;
+  color: white !important;
+}
+
+/* Version mobile */
+
+@media (max-width: 600px) {
+  .home {
+    padding: 20px;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .logo {
+    font-size: 65px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  .category-button,
+  .categories button {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
